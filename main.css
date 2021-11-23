@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+
+.slider-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.back-button {
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  top: 0;
+  height: 6%;
+  width: 7%;
+  left: 0.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.back-button p {
+  color: black;
+  font-size: large;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.back-button:hover {
+  background-color: gray;
+  letter-spacing: 0.7rem;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.left > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  animation-name: example;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  margin-left: -40%;
+  margin-top: -100%;
+}
+@keyframes example {
+  0% {
+    margin-left: -40%;
+    margin-top: -100%;
+  }
+  15% {
+    margin-left: 40%;
+    margin-top: -100%;
+  }
+  32% {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  47% {
+    margin-left: -40%;
+    margin-top: 100%;
+  }
+  65% {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  84% {
+    margin-left: 40%;
+    margin-top: -100%;
+  }
+  100% {
+    margin-left: -40%;
+    margin-top: -100%;
+  }
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: 100%;
+  width: 60%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.right > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.right h2 {
+  text-transform: capitalize;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.project a:hover {
+  background-color: white;
+}
+
+.right p {
+  color: black;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  font-weight: 300;
+  font-size: large;
+}
+
+.skills {
+  height: 50%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
+  margin-bottom: auto;
+}
+
+.skill {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 0 5px 10px 0;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.skill:hover {
+  background-color: rgb(238, 156, 156);
+}
+
+.work {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work a {
+  color: white;
+}
+
+.work a:hover {
+  letter-spacing: 0.1rem;
+  background-color: rgb(45, 185, 45);
+}
+
+.achievements {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievements p {
+  color: whitesmoke;
+  padding-top: 1rem;
+}
+
+.achievements p:hover {
+  color: yellow;
+  letter-spacing: 0.1rem;
+}
+
+.achievements p a {
+  color: yellow;
+}
+
+.achievements p a:hover {
+  color: black;
+  background-color: white;
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 300;
+}
+
+.profile label {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.profile a {
+  color: whitesmoke;
+}
+
+.profile a:hover {
+  letter-spacing: 0.1rem;
+  color: #a96bd3;
+  background-color: lightgray;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 1.7rem;
+}
+
+button:hover {
+  color: gray;
+  font-size: 1.7rem;
+  border: 1rem solid;
+  padding: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .buttons button {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slider-container .buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media only screen and (max-width: 860px) {
+  button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  button:hover {
+    color: none;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 0;
+    padding: 0.8rem;
+  }
+  .back-button:hover {
+    letter-spacing: 0.3rem;
+  }
+  .left {
+    width: 40%;
+  }
+  .right {
+    left: 40%;
+    width: 60%;
+  }
+  .right p {
+    font-weight: 100;
+    font-size: medium;
+  }
+  .right h2 {
+    font-size: medium;
+  }
+  .skills {
+    height: 100%;
+    width: 100%;
+    margin-top: 40%;
+    margin-left: 8%;
+  }
+  .skill {
+    margin: 0 3px 5px 0;
+  }
+  .work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .profile {
+    font-size: small;
+    width: 70%;
+    margin-left: 20%;
+    word-break: break-all;
+  }
+  .profile label {
+    margin-top: 1rem;
+  }
+  .slider-container .buttons button {
+    left: 40%;
+  }
+  .left h1 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: -80px;
+  }
+  .back-button {
+    width: 18%;
+  }
+}
