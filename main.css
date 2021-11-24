@@ -137,18 +137,6 @@ body {
   justify-content: center;
 }
 
-.projects {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.project a:hover {
-  background-color: white;
-}
-
 .right p {
   color: black;
   align-items: center;
@@ -157,6 +145,28 @@ body {
   margin-left: 10%;
   font-weight: 300;
   font-size: large;
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.projects h2 {
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2%;
+}
+
+.projects p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.project a:hover {
+  background-color: white;
 }
 
 .skills {
@@ -279,21 +289,21 @@ button:focus {
   outline: none;
 }
 
-.slider-container .buttons button {
+.buttons button {
   position: absolute;
   left: 40%;
   top: 50%;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.slider-container .buttons .down-button {
+.buttons .down-button {
   transform: translateX(-100%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.slider-container .buttons .up-button {
+.buttons .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
